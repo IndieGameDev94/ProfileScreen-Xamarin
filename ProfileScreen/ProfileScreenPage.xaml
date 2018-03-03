@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProfileScreen"
+    x:Class="ProfileScreen.ProfileScreenPage"
+    BackgroundColor="{StaticResource BackgroundColor}">
+    <Grid
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- header background-->
+       
+        <Image
+            Source="HeaderBackground.png"
+            Aspect="AspectFill" />
+        <Image
+            Margin="0,-1"
+            Source="CurvedMask"
+            VerticalOptions="End"
+            Aspect="AspectFill" />
+        <!-- profile name-->
+        <StackLayout
+            Padding="0,50,0,0"
+            Grid.Row="1">
+            <Label
+                Text="Clementine"
+                Style="{StaticResource ProfileNameLabel}" />
+            <Label
+                Text="Hispter Coffee Drinker"
+                Style="{StaticResource ProfileTagLabel}" />
+        </StackLayout>
+        <!-- social stats-->
+        <Grid
+            Margin="0,30"
+            ColumnSpacing="0"
+            Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Column="0">
+                <Label
+                    Text="100"
+                    Style="{StaticResource StatsNumberLabel}" />
+                <Label
+                    Text="Likes"
+                    Style="{StaticResource StatsCaptionLabel}" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="1">
+                <Label
+                    Text="100"
+                    Style="{StaticResource StatsNumberLabel}" />
+                <Label
+                    Text="Following"
+                    Style="{StaticResource StatsCaptionLabel}" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="2">
+                <Label
+                    Text="100"
+                    Style="{StaticResource StatsNumberLabel}" />
+                <Label
+                    Text="Followers"
+                    Style="{StaticResource StatsCaptionLabel}" />
+            </StackLayout>
+        </Grid>
+        <!-- profile description-->
+        <Label
+            Grid.Row="3"
+            Text="I thought I would throw some keywords that would describe what I like to do. If you recognize yourself in some of them, I think it might be worth taking the time to keep on reading my profile."
+            Style="{StaticResource MainBodyLabel}"
+            Margin="20,0" />
+        <!-- follow button-->
+        <Button
+            Grid.Row="4"
+            Text="Follow"
+            Margin="20"
+            Style="{StaticResource FollowButton}" />
+        <!-- Profile Image-->
+        <Image
+            Source="ProfilePic.png"
+            WidthRequest="100"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            TranslationY="50" />
+    </Grid>
+</ContentPage>
